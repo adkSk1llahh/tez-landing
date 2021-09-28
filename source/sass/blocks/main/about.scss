@@ -1,0 +1,61 @@
+.about {
+    padding: 90px 0;
+
+    &__text {
+        max-width: 460px;
+    }
+
+    &__image {
+        width: 520px;
+    }
+
+    &__desc {
+        color: #fff;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 26px;
+
+        margin-top: 56px;
+    }
+
+    &__bank-list {
+        margin-top: 42px;
+    }
+
+    &__bank-title {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 24px;
+        color: #fff;
+        opacity: 0.6;
+    }
+
+    &__bank-items{
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        margin-top: 26px;
+
+
+        &:before {
+            content: '';
+            height: 100%;
+            border: 1px solid rgba(255,255,255,.2);
+            border-radius: 14px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+    }
+
+    &__item{
+        width: 190px;
+        height: 60px;
+    }
+
+    &__bank-icon{
+        width: 100%;
+    }
+
+}

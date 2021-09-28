@@ -1,0 +1,47 @@
+.features {
+    padding-top: 85px;
+    padding-bottom: 85px;
+
+    &__list {
+        padding-left: 48px;
+        padding-top: 80px;
+        padding-right: 46px;
+        padding-bottom: 80px;
+        background: #1a2133;
+
+        border-radius: 16px;
+
+        margin-top: 40px;
+    }
+
+    &__list-item {
+        max-width: 220px;
+        width: 100%;
+    }
+
+    &__text {
+        margin-top: 32px;
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        color: #38cbb0;
+    }
+
+    &__desc {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+        margin-top: 32px;
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    &__image {
+        margin: 0 auto;
+        display: block;
+        height: 90px;
+        width: auto;
+    }
+}

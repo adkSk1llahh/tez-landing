@@ -1,0 +1,117 @@
+.form-modal {
+    position: fixed;
+    z-index: 15;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    width: fit-content;
+}
+
+.form {
+    background-color: #fff;
+    border-radius: 9px;
+    padding: 32px 136px;
+
+    &__question {
+        max-width: 432px;
+        width: 100%;
+    }
+
+    &__input {
+        display: block;
+        padding: 17px 16px;
+        width: 100%;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+        font-family: "SF UI", "Arial", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #666;
+        outline: 0;
+        margin-top: 22px;
+
+        &:first-child{
+            margin-top: 36px;
+        }
+
+        &--textarea {
+            resize: none;
+            min-height: 116px;
+        }
+
+        &:hover,
+        &:focus {
+            border-color: #5ee2cb;
+        }
+
+        &.error{
+            border-color: #EB5757;
+        }
+    }
+
+    &__checkbox-input {
+        opacity: 0;
+        visibility: hidden;
+        z-index: -1;
+        position: absolute;
+    }
+
+    &__checkbox-input+&__checkbox:before {
+        content: "";
+        width: 24px;
+        height: 24px;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        background-repeat: no-repeat;
+        background-position: 50%;
+        background-size: 50% 50%;
+        margin-right: 10px;
+    }
+
+    &__checkbox {
+        width: 100%;
+        display: inline-flex;
+        align-items: center;
+        user-select: none;
+        color: rgba(0, 0, 0, 0.4);
+        margin: 22px 0;
+
+        &:hover,
+        &:focus {
+            &:before {
+                border-color: #5ee2cb;
+            }
+        }
+    }
+
+    &__checkbox-input:checked+&__checkbox::before {
+        border-color: #3ecbc0;
+        background-color: #3ecbc0;
+        background-image: url(../images/icons/checkbox.svg);
+    }
+
+    &__button {
+        padding: 17px;
+        width: 100%;
+        background: #3ecbc0;
+        box-shadow: 0px 4px 24px #5ee2cb;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 26px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #60e1d7;
+        }
+    }
+}
+
+label.error{
+    display: inline-block;
+    margin-top: 11px;
+    font-size: 14px;
+    color: #EB5757;
+}

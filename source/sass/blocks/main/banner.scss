@@ -1,0 +1,21 @@
+.banner {
+  background-color: #1a2133;
+  background-image: url(../images/desktop/tezapp@1x.png);
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  padding: 48px;
+
+  &__title {
+    max-width: 470px;
+    margin-bottom: 48px;
+  }
+
+  &__text {
+    max-width: 370px;
+    color: #fff;
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 400;
+  }
+}

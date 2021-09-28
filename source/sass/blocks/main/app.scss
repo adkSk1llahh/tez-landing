@@ -1,0 +1,40 @@
+.app {
+  margin-top: 86px;
+
+  &__title {
+    color: #1dd499;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 23px;
+  }
+
+  &__list {
+    margin-top: 14px;
+    display: flex;
+  }
+
+  &__list-item {
+    display: flex;
+    align-items: center;
+    width: 180px;
+    height: 60px;
+    background-color: #111;
+    backdrop-filter: blur(15.287px);
+    border-radius: 8px;
+    margin-right: 16px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: #131a28;
+    }
+  }
+
+  &__icon {
+    margin: 10px;
+  }
+}

@@ -1,0 +1,29 @@
+.send-money {
+  padding: 105px 0;
+
+  &__text {
+    max-width: 450px;
+  }
+
+  &__list {
+    margin-top: 48px;
+
+    &::before {
+      content: "";
+      height: calc(100% - 10px);
+      border: 1px dashed #fff;
+      position: absolute;
+      left: 20px;
+      top: 5px;
+      z-index: 1;
+    }
+  }
+
+  &__list-item{
+      align-items: center;
+  }
+  
+  &__image{
+      width: 540px;
+  }
+}

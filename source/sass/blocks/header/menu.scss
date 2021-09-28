@@ -1,0 +1,12 @@
+.menu{
+    display: flex;
+
+    &__item{
+        padding: 20px;
+        font-weight: 600;
+    }
+
+    &__item-link{
+        color: #fff;
+    }
+}

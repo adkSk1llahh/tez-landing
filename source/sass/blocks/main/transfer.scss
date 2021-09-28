@@ -1,0 +1,21 @@
+.transfer {
+    padding: 106px 0;
+
+    &__text {
+        max-width: 460px;
+    }
+
+
+    &__list {
+        margin-top: 56px;
+        max-width: 390px;
+    }
+
+    &__image {
+        width: 540px;
+    }
+
+    &__list-item {
+        margin-bottom: 32px;
+    }
+}

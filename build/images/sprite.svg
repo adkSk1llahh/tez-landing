@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-arrow-down" viewBox="0 0 12 12">
+<path d="M0.75 4L6 9.25L11.25 4" stroke="white" stroke-opacity="0.24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol><symbol id="icon-burger" viewBox="0 0 17 16">
+<path d="M15.6666 1H1.66663" stroke-width="1.53333" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M15.6666 8H1.66663" stroke-width="1.53333" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M15.6666 15L1.66663 15" stroke-width="1.53333" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol><symbol id="icon-close" viewBox="0 0 24 24">
+<path d="M3.5 3.5L21 21" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M3.5 21L21 3.5" stroke-width="2" stroke-miterlimit="10"/>
+</symbol></svg>

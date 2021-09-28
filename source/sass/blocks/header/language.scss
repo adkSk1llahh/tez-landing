@@ -1,0 +1,157 @@
+.language {
+  position: relative;
+
+  max-width: 90px;
+  width: 100%;
+
+  padding-bottom: 12px;
+  margin-top: 12px;
+
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+
+    content: "";
+    width: 16px;
+    height: 16px;
+
+    background-image: url("../images/icons/icon-arrow-down.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include respond-to(320) {
+      top: 13px;
+      right: 11px;
+
+      width: 14px;
+      height: 14px;
+    }
+  }
+
+  @include respond-to(320) {
+    max-width: 63px;
+    margin-left: auto;
+    margin-right: 18px;
+  }
+
+  &__list {
+    position: absolute;
+    top: 100%;
+    right: 0;
+
+    display: none;
+
+    background-color: #fff;
+
+    padding-left: 10px;
+    padding-right: 10px;
+
+    border-radius: 8px;
+  }
+
+  &__item {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 32px;
+    padding-right: 32px;
+
+    opacity: 0.4;
+
+    &--active {
+      opacity: 1;
+    }
+
+    &--top {
+      padding-top: 14px;
+      padding-bottom: 14px;
+      padding-left: 16px;
+      padding-right: 16px;
+      opacity: 1;
+      background: #1a2133;
+      border-radius: 8px;
+
+      @include respond-to(320) {
+        padding-top: 11px;
+        padding-bottom: 11px;
+        padding-left: 13px;
+        padding-right: 13px;
+      }
+    }
+
+    &--icon {
+      position: relative;
+
+      &::before {
+        content: "";
+        width: 24px;
+        height: 24px;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        position: absolute;
+        left: 2px;
+        top: 10px;
+      }
+    }
+
+    &--kz {
+      &::before {
+        background-image: url("../images/icons/kz.svg");
+      }
+    }
+
+    &--ru {
+      &::before {
+        background-image: url("../images/icons/ru.svg");
+      }
+    }
+
+    &--en {
+      &::before {
+        background-image: url("../images/icons/en.svg");
+      }
+    }
+
+    &--uz {
+      &::before {
+        background-image: url("../images/icons/uz.svg");
+      }
+    }
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+
+
+  }
+
+  &__item-link {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #111;
+
+    &--top {
+      color: #fff;
+
+      @include respond-to(320) {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &:hover,
+  &:focus {
+    &::before {
+      transform: rotate(180deg);
+    }
+
+    .language__list {
+      display: block;
+    }
+  }
+}

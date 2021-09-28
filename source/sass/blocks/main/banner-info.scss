@@ -1,0 +1,15 @@
+.banner-info {
+  margin: 86px auto;
+  background-image: url(../images/desktop/app-info@1x.png);
+  background-position: right top;
+  background-size: 1200px 100%;
+
+  &__text {
+    max-width: 400px;
+    padding-top: 40px;
+  }
+
+  &__app {
+    margin-top: 62px;
+  }
+}
