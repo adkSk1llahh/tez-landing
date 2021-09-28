@@ -13,9 +13,21 @@
     border-radius: 9px;
     padding: 32px 136px;
 
+    @include respond-to(320) {
+        padding: 24px 16px;
+    }
+
     &__question {
         max-width: 432px;
         width: 100%;
+    }
+
+    &__title{
+        padding-bottom: 14px;
+
+        @include respond-to(320) {
+            padding-bottom: 4px;
+        }
     }
 
     &__input {
@@ -27,14 +39,10 @@
         font-family: "SF UI", "Arial", sans-serif;
         font-weight: 400;
         font-size: 16px;
-        line-height: 1.5;
+        line-height: 1.25;
         color: #666;
         outline: 0;
         margin-top: 22px;
-
-        &:first-child{
-            margin-top: 36px;
-        }
 
         &--textarea {
             resize: none;
@@ -48,6 +56,12 @@
 
         &.error{
             border-color: #EB5757;
+        }
+
+        @include respond-to(320) {
+            padding: 11px 16px;
+            font-size: 12px;
+            margin-top: 12px;
         }
     }
 
@@ -68,6 +82,11 @@
         background-position: 50%;
         background-size: 50% 50%;
         margin-right: 10px;
+
+        @include respond-to(320) {
+            width: 16px;
+            height: 16px;
+        }
     }
 
     &__checkbox {
@@ -77,12 +96,19 @@
         user-select: none;
         color: rgba(0, 0, 0, 0.4);
         margin: 22px 0;
+        font-size: 16px;
+        line-height: 1.25;
 
         &:hover,
         &:focus {
             &:before {
                 border-color: #5ee2cb;
             }
+        }
+
+        @include respond-to(320) {
+            font-size: 12px;
+            margin: 16px 0;
         }
     }
 
@@ -100,11 +126,15 @@
         border-radius: 8px;
         font-weight: 600;
         font-size: 18px;
-        line-height: 26px;
+        line-height: 1.25;
         cursor: pointer;
 
         &:hover {
             background-color: #60e1d7;
+        }
+
+        @include respond-to(320) {
+            font-size: 16px;
         }
     }
 }
@@ -114,4 +144,9 @@ label.error{
     margin-top: 11px;
     font-size: 14px;
     color: #EB5757;
+
+    @include respond-to(320) {
+        font-size: 12px;
+        margin-top: 6px;
+    }
 }

@@ -18,6 +18,13 @@
     {
         border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
+
+    &--footer{
+        @include respond-to(320) {
+            border: none;
+        }
+    }
+    
 }
 
 .container {
@@ -31,7 +38,7 @@
     margin-bottom: 0;
 
     @include respond-to(320) {
-        width: 320px;
+        max-width: 320px;
         padding-left: 16px;
         padding-right: 16px;
     }
@@ -47,6 +54,10 @@
     font-weight: 700;
     font-size: 40px;
     line-height: 1.25;
+
+    @include respond-to(320) {
+        font-size: 24px;
+    }
 }
 
 .overlay{

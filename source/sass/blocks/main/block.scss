@@ -3,6 +3,10 @@
   justify-content: space-between;
   align-items: center;
 
+  @include respond-to(320) {
+    flex-direction: column-reverse;
+  }
+
   &__side {
     margin: 0 auto;
   }
@@ -16,6 +20,10 @@
     color: #fff;
     margin-bottom: 48px;
     z-index: 2;
+
+    @include respond-to(320) {
+      margin-bottom: 26px;
+    }
   }
 
   &__number {
@@ -41,5 +49,9 @@
     width: 24px;
     height: 24px;
     margin-right: 24px;
+
+    @include respond-to(320) {
+      margin-right: 16px;
+    }
   }
 }

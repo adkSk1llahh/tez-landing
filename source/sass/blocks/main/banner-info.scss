@@ -1,15 +1,44 @@
 .banner-info {
-  margin: 86px auto;
+  margin-top: 86px;
+  margin-bottom: 86px;
+  margin-right: auto;
+  margin-left: auto;
+
   background-image: url(../images/desktop/app-info@1x.png);
   background-position: right top;
   background-size: 1200px 100%;
 
+  @include respond-to(320) {
+    margin-top: 16px;
+    margin-bottom: 16px;
+
+    min-height: 562px;
+
+    background-image: url(../images/mobile/app-info@1x.png);
+    background-position: center bottom;
+    background-size: 288px auto;
+  }
+
   &__text {
     max-width: 400px;
     padding-top: 40px;
+
+    @include respond-to(320) {
+      padding-top: 0;
+    }
   }
 
   &__app {
     margin-top: 62px;
+
+    @include respond-to(320) {
+      margin-top: 22px;
+      padding-top: 28px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+  }
+
+  .app{
+    display: block;
   }
 }

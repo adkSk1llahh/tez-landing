@@ -2,8 +2,17 @@
     padding-top: 82px;
     padding-bottom: 82px;
 
+    @include respond-to(320) {
+        padding-top: 16px;
+        padding-bottom: 30px;
+    }
+
     &__list {
         margin-top: 48px;
+
+        @include respond-to(320) {
+            margin-top: 16px;
+        }
     }
 
     &__list-item{
@@ -16,20 +25,25 @@
 
     &__item {
         font-size: 20px;
-        line-height: 26px;
+        line-height: 1.25;
         color: #fff;
         font-size: 20px;
-        line-height: 26px;
         padding: 14px 24px;
 
         &--button{
             font-weight: 600;
             background-color: transparent;
             border-radius: 12px;
+            text-align: left;
         }
 
         &--text{
             opacity: 0.6;
+        }
+
+        @include respond-to(320) {
+            font-size: 14px;
+            padding: 12px;
         }
     }
 

@@ -1,11 +1,19 @@
 .app {
   margin-top: 86px;
+    
+  @include respond-to(320) {
+    margin-top: 24px;
+  }
 
   &__title {
     color: #1dd499;
     font-weight: 600;
     font-size: 20px;
-    line-height: 23px;
+    line-height: 1.25;
+
+    @include respond-to(320) {
+      font-size: 16px;
+    }
   }
 
   &__list {
@@ -16,12 +24,25 @@
   &__list-item {
     display: flex;
     align-items: center;
-    width: 180px;
-    height: 60px;
+    max-width: 180px;
+    width: 100%;
+    min-height: 60px;
     background-color: #111;
     backdrop-filter: blur(15.287px);
     border-radius: 8px;
     margin-right: 16px;
+
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+
+    box-shadow: 0px 0px 45px rgba(0, 255, 194, 0.3);
+
+    @include respond-to(320) {
+      max-width: 124px;
+      min-height: 50px;
+      margin-right: auto;
+    }
 
     &:last-child {
       margin-right: 0;
@@ -35,6 +56,23 @@
   }
 
   &__icon {
-    margin: 10px;
+    @include respond-to(320) {
+      width: 34px;
+      height: 34px;
+    }
+  }
+
+  &__link-text{
+    @include respond-to(320) {
+      font-size: 10px;
+    }
+
+    &--opacity{
+      opacity: 0.8;
+      @include respond-to(320) {
+        font-size: 12px;
+        margin-top: 4px;
+      }
+    }
   }
 }
