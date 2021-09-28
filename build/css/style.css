@@ -972,7 +972,7 @@ textarea {
   margin-left: auto;
   background-image: url(../images/desktop/app-info@1x.png);
   background-position: right top;
-  background-size: 1200px 100%;
+  background-size: 1223px 100%;
 }
 @media only screen and (max-width: 767px) {
   .banner-info {
@@ -1024,6 +1024,12 @@ textarea {
   border-radius: 9px;
   padding: 32px 136px;
 }
+.form--result {
+  padding-top: 76px;
+  padding-right: 152px;
+  padding-bottom: 106px;
+  padding-left: 152px;
+}
 @media only screen and (max-width: 767px) {
   .form {
     padding: 24px 16px;
@@ -1033,12 +1039,58 @@ textarea {
   max-width: 432px;
   width: 100%;
 }
+.form__question--result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 .form__title {
   padding-bottom: 14px;
 }
 @media only screen and (max-width: 767px) {
   .form__title {
     padding-bottom: 4px;
+  }
+}
+.form__result-image {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 18px;
+}
+.form__result-title {
+  margin-bottom: 32px;
+}
+.form__result-title--error {
+  background: #eb5757;
+  -webkit-background-clip: text;
+}
+@media only screen and (max-width: 767px) {
+  .form__result-title {
+    margin-bottom: 16px;
+  }
+}
+.form__result-text {
+  font-size: 20px;
+  line-height: 1.25;
+  color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  max-width: 320px;
+}
+.form__result-text--link {
+  color: #4C9EE7;
+  text-decoration: underline;
+}
+@media only screen and (max-width: 767px) {
+  .form__result-text--link {
+    text-decoration: none;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .form__result-text {
+    font-size: 14px;
+    max-width: 196px;
   }
 }
 .form__input {

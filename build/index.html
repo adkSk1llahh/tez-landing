@@ -290,12 +290,14 @@
 
 					<ul class="block__list transfer__list">
 						<li class="block__list-item transfer__list-item">
-							<img src="images/icons/check.svg" class="block__check transfer__check" width="24" height="24"></img>
+							<img src="images/icons/check.svg" class="block__check transfer__check" width="24"
+								height="24"></img>
 							<p class="block__text">Получайте переводы на карты 17 самых крупных банков Узбекистана</p>
 						</li>
 
 						<li class="block__list-item  transfer__list-item">
-							<img src="images/icons/check.svg" class="block__check transfer__check" width="24" height="24"></img>
+							<img src="images/icons/check.svg" class="block__check transfer__check" width="24"
+								height="24"></img>
 							<p class="block__text">Все данные защищены стандартом Payment Card Industry Data Security
 							</p>
 						</li>
@@ -437,7 +439,6 @@
 	</section>
 
 	<section class="modal modal--ask-question">
-
 		<div class="form-modal">
 			<div class="form">
 				<form action="/" method="POST" class="form__question" id="form">
@@ -465,7 +466,52 @@
 
 			</button>
 		</div>
+	</section>
 
+	<section class="modal modal--result">
+		<div class="form-modal">
+			<div class="form form--result">
+				<div class="form__question--result">
+					<img class="form__result-image" src="./images/icons/modal-success.svg" alt="" width="64" height="64">
+					<h1 class="title gradient form__result-title form__result-title">Заявка отправлена</h1>
+					<p class="form__result-text">
+						Вам придет ответ на уканный электронный адрес
+					</p>
+				</div>
+			</div>
+
+			<button class="modal__button-close" type="submit">
+				<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+					class="modal__button-img">
+					<path d="M3.5 3.5L21 21" stroke-width="2" stroke-miterlimit="10" />
+					<path d="M3.5 21L21 3.5" stroke-width="2" stroke-miterlimit="10" />
+				</svg>
+
+			</button>
+		</div>
+	</section>
+
+	<section class="modal modal--result">
+		<div class="form-modal">
+			<div class="form form--result">
+				<div class="form__question--result">
+					<img class="form__result-image" src="./images/icons/modal-error.svg" alt="" width="64" height="64">
+					<h1 class="title gradient form__result-title form__result-title--error">Что-то пошло нитак...</h1>
+					<a class="form__result-text--link" href="#">
+						На главную страницу
+					</a>
+				</div>
+			</div>
+
+			<button class="modal__button-close" type="submit">
+				<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+					class="modal__button-img">
+					<path d="M3.5 3.5L21 21" stroke-width="2" stroke-miterlimit="10" />
+					<path d="M3.5 21L21 3.5" stroke-width="2" stroke-miterlimit="10" />
+				</svg>
+
+			</button>
+		</div>
 	</section>
 
 	<button class="contact-button">
