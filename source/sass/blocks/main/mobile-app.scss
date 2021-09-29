@@ -1,8 +1,0 @@
-.mobile-app {
-    display: none;
-
-    @include respond-to(320) {
-        display: block;
-        margin-bottom: 24px;
-    }
-}

@@ -66,20 +66,19 @@
     }
 
     &--top {
-      padding-top: 14px;
-      padding-bottom: 14px;
-      padding-left: 16px;
-      padding-right: 16px;
+      padding: 14px 16px;
       opacity: 1;
       background: #1a2133;
       border-radius: 8px;
 
       @include respond-to(320) {
-        padding-top: 11px;
-        padding-bottom: 11px;
-        padding-left: 13px;
-        padding-right: 13px;
+        padding: 12px 14px;
       }
+    }
+
+    &--bottom{
+      padding: 0;
+      opacity: 1;
     }
 
     &--icon {

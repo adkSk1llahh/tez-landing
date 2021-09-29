@@ -32,12 +32,6 @@
 
   &__list-item {
     align-items: center;
-    font-size: 20px;
-    font-weight: 1.5;
-
-    @include respond-to(320) {
-      font-size: 14px;
-    }
   }
 
   &__image {

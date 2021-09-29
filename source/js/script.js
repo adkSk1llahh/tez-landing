@@ -1,4 +1,4 @@
-$(".faq__button").on("click", function () {
+$(".faq__item--button").on("click", function () {
   if ($(this).next().hasClass("active")) {
     $(this).next().removeClass("active");
   } else {

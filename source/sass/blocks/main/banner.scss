@@ -36,11 +36,4 @@
       font-size: 14px;
     }
   }
-
-  .app{
-    display: block;
-    @include respond-to(320) {
-      display: none;
-    }
-  }
 }

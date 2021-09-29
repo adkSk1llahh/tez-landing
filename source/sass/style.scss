@@ -22,10 +22,9 @@
 
 //main
 
+@import "blocks/main/wrapper.scss";
 @import "blocks/main/banner.scss";
-@import "blocks/main/mobile-app.scss";
 @import "blocks/main/app.scss";
-@import "blocks/main/main.scss";
 @import "blocks/main/block.scss";
 @import "blocks/main/send-money.scss";
 @import "blocks/main/get-money.scss";

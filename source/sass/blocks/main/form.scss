@@ -1,43 +1,38 @@
-.form-modal {
-    position: fixed;
-    z-index: 15;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    width: fit-content;
-}
-
 .form {
     background-color: #fff;
     border-radius: 9px;
-    padding: 32px 136px;
-
-    &--result{
-        padding-top: 76px;
-        padding-right: 152px;
-        padding-bottom: 106px;
-        padding-left: 152px;
-    }
+    max-width: 704px;
+    width: 100%;
+    position: relative;
 
     @include respond-to(320) {
-        padding: 24px 16px;
+        max-width: 288px;
     }
 
-    &__question {
-        max-width: 432px;
-        width: 100%;
+    &--result {
+        padding-top: 76px;
+        padding-bottom: 106px;
+        padding-left: 152px;
+        padding-right: 152px;
+        text-align: center;
 
-        &--result{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
+        @include respond-to(320) {
+            padding-top: 56px;
+            padding-bottom: 54px;
+            padding-left: 46px;
+            padding-right: 46px;
         }
     }
 
-    &__title{
+    &--question {
+        padding: 32px 136px;
+
+        @include respond-to(320) {
+            padding: 24px 16px;
+        }
+    }
+
+    &__title {
         padding-bottom: 14px;
 
         @include respond-to(320) {
@@ -45,16 +40,16 @@
         }
     }
 
-    &__result-image{
+    &__result-image {
         width: 64px;
         height: 64px;
         margin-bottom: 18px;
     }
 
-    &__result-title{
+    &__result-title {
         margin-bottom: 32px;
 
-        &--error{
+        &--error {
             background: #eb5757;
             -webkit-background-clip: text;
         }
@@ -64,14 +59,15 @@
         }
     }
 
-    &__result-text{
+    &__result-text {
         font-size: 20px;
         line-height: 1.25;
         color: rgba(0, 0, 0, 0.8);
         text-align: center;
         max-width: 320px;
+        margin: 0 auto;
 
-        &--link{
+        &--link {
             color: #4C9EE7;
             text-decoration: underline;
 
@@ -80,7 +76,7 @@
             }
         }
 
-        
+
         @include respond-to(320) {
             font-size: 14px;
             max-width: 196px;
@@ -111,7 +107,7 @@
             border-color: #5ee2cb;
         }
 
-        &.error{
+        &.error {
             border-color: #EB5757;
         }
 
@@ -196,7 +192,7 @@
     }
 }
 
-label.error{
+label.error {
     display: inline-block;
     margin-top: 11px;
     font-size: 14px;

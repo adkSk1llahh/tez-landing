@@ -1,16 +1,12 @@
 .banner-info {
-  margin-top: 86px;
-  margin-bottom: 86px;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 86px auto;
 
   background-image: url(../images/desktop/app-info@1x.png);
   background-position: right top;
-  background-size: 1223px 100%;
+  background-size: 1220px 100%;
 
   @include respond-to(320) {
-    margin-top: 16px;
-    margin-bottom: 16px;
+    margin: 16px auto;
 
     min-height: 562px;
 
@@ -28,17 +24,4 @@
     }
   }
 
-  &__app {
-    margin-top: 62px;
-
-    @include respond-to(320) {
-      margin-top: 22px;
-      padding-top: 28px;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-    }
-  }
-
-  .app{
-    display: block;
-  }
 }

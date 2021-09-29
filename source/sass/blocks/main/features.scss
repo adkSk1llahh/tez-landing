@@ -1,12 +1,16 @@
 .features {
-    padding-top: 16px;
-    padding-bottom: 24px;
+
+    padding-top: 84px;
+    padding-bottom: 84px;
+
+    @include respond-to(320) {
+        padding-top: 16px;
+        padding-bottom: 24px;
+    }
+
 
     &__list {
-        padding-left: 48px;
-        padding-top: 80px;
-        padding-right: 46px;
-        padding-bottom: 80px;
+        padding: 80px 46px;
         background: #1a2133;
 
         border-radius: 16px;
@@ -15,11 +19,7 @@
 
         @include respond-to(320) {
             margin-top: 24px;
-
-            padding-left: 12px;
-            padding-top: 20px;
-            padding-right: 12px;
-            padding-bottom: 20px;
+            padding: 20px 12px;
 
             flex-direction: column;
         }
@@ -45,7 +45,7 @@
 
         @include respond-to(320) {
             margin-top: 0;
-            max-width: 147px;
+            max-width: 184px;
         }
     }
 
@@ -85,6 +85,7 @@
 
         @include respond-to(320) {
             height: 64px;
+            margin-left: 0;
         }
     }
 }

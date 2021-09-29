@@ -29,12 +29,18 @@
         color: #fff;
         font-size: 20px;
         padding: 14px 24px;
+        display: flex;
+        align-items: center;
+        width: 100%;
+
 
         &--button{
             font-weight: 600;
             background-color: transparent;
             border-radius: 12px;
             text-align: left;
+            background-color: #232B3E;
+            cursor: pointer;
         }
 
         &--text{
@@ -47,14 +53,6 @@
         }
     }
 
-    &__button{
-        display: flex;
-        align-items: center;
-        width: 100%;
-        cursor: pointer;
-
-        background-color: #232B3E;
-    }
 
     &__arrow{
         margin-left: auto;

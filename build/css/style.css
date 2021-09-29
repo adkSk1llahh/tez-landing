@@ -56,24 +56,12 @@ textarea {
   src: url("../fonts/sfui400.woff2") format("woff2"), url("../fonts/sfui400.woff") format("woff");
 }
 .body {
-  background-color: #0B1323;
+  background-color: #0b1323;
   font-family: "SF UI", "Arial", sans-serif;
 }
 
-.wrapper--send-money, .wrapper--get-money, .wrapper--features, .wrapper--faq, .wrapper--transfer, .wrapper--about {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-.wrapper--footer {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-@media only screen and (max-width: 767px) {
-  .wrapper--footer {
-    border: none;
-  }
-}
-
 .container {
-  max-width: 1223px;
+  max-width: 1220px;
   width: 100%;
   padding-left: 10px;
   padding-right: 10px;
@@ -112,7 +100,7 @@ textarea {
   top: 0;
   left: 0;
   z-index: 1;
-  background-color: #0B1323;
+  background-color: #0b1323;
   opacity: 0.5;
   width: 100%;
   height: 100%;
@@ -155,11 +143,17 @@ textarea {
 .modal.active {
   display: block;
 }
+.modal__content {
+  position: fixed;
+  z-index: 15;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
 .modal__button-close {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  margin-left: 12px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -168,12 +162,29 @@ textarea {
 .modal__button-close:hover path, .modal__button-close:focus path {
   stroke: #3ecbc0;
 }
+.modal__button-close--desktop {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-left: 12px;
+}
 @media only screen and (max-width: 767px) {
-  .modal__button-close {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-color: #fff;
+  .modal__button-close--desktop {
+    display: none;
+  }
+}
+.modal__button-close--mobile {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #fff;
+  margin-left: 0;
+  padding: 15px;
+}
+@media only screen and (max-width: 767px) {
+  .modal__button-close--mobile {
+    display: flex;
   }
 }
 .modal__button-img path {
@@ -194,10 +205,9 @@ textarea {
   border-radius: 50%;
   cursor: pointer;
   z-index: 10;
-}
-.contact-button__link {
-  width: 100%;
-  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .menu-mobile {
@@ -254,6 +264,12 @@ textarea {
 .header {
   display: flex;
   align-items: center;
+  margin-bottom: 40px;
+}
+@media only screen and (max-width: 767px) {
+  .header {
+    margin-bottom: 26px;
+  }
 }
 .header__nav {
   margin-left: auto;
@@ -273,6 +289,9 @@ textarea {
     background-color: transparent;
   }
 }
+.header__button-image {
+  display: block;
+}
 .header__button-image path {
   stroke: #fff;
 }
@@ -281,10 +300,10 @@ textarea {
   display: flex;
 }
 .menu__item {
-  padding: 20px;
   font-weight: 600;
 }
-.menu__item-link {
+.menu__link {
+  padding: 20px;
   color: #fff;
 }
 
@@ -344,21 +363,19 @@ textarea {
   opacity: 1;
 }
 .language__item--top {
-  padding-top: 14px;
-  padding-bottom: 14px;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding: 14px 16px;
   opacity: 1;
   background: #1a2133;
   border-radius: 8px;
 }
 @media only screen and (max-width: 767px) {
   .language__item--top {
-    padding-top: 11px;
-    padding-bottom: 11px;
-    padding-left: 13px;
-    padding-right: 13px;
+    padding: 12px 14px;
   }
+}
+.language__item--bottom {
+  padding: 0;
+  opacity: 1;
 }
 .language__item--icon {
   position: relative;
@@ -408,6 +425,21 @@ textarea {
   display: block;
 }
 
+.wrapper {
+  border: none;
+}
+.wrapper__send-money, .wrapper__get-money, .wrapper__features, .wrapper__faq, .wrapper__transfer, .wrapper__about {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.wrapper__footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+@media only screen and (max-width: 767px) {
+  .wrapper__footer {
+    border: none;
+  }
+}
+
 .banner {
   background-color: #1a2133;
   background-image: url(../images/desktop/tezapp@1x.png);
@@ -447,24 +479,6 @@ textarea {
     font-size: 14px;
   }
 }
-.banner .app {
-  display: block;
-}
-@media only screen and (max-width: 767px) {
-  .banner .app {
-    display: none;
-  }
-}
-
-.mobile-app {
-  display: none;
-}
-@media only screen and (max-width: 767px) {
-  .mobile-app {
-    display: block;
-    margin-bottom: 24px;
-  }
-}
 
 .app {
   margin-top: 86px;
@@ -500,9 +514,7 @@ textarea {
           backdrop-filter: blur(15.287px);
   border-radius: 8px;
   margin-right: 16px;
-  padding-bottom: 10px;
-  padding-top: 10px;
-  padding-left: 10px;
+  padding: 10px;
   box-shadow: 0px 0px 45px rgba(0, 255, 194, 0.3);
 }
 @media only screen and (max-width: 767px) {
@@ -525,26 +537,44 @@ textarea {
   }
 }
 @media only screen and (max-width: 767px) {
-  .app__link-text {
+  .app__text {
     font-size: 10px;
   }
 }
-.app__link-text--opacity {
+.app__text--opacity {
   opacity: 0.8;
 }
 @media only screen and (max-width: 767px) {
-  .app__link-text--opacity {
+  .app__text--opacity {
     font-size: 12px;
     margin-top: 4px;
   }
 }
-
-.main {
-  margin-top: 40px;
+.app--banner {
+  display: block;
 }
 @media only screen and (max-width: 767px) {
-  .main {
-    margin-top: 26px;
+  .app--banner {
+    display: none;
+  }
+}
+.app--banner-info {
+  margin-top: 62px;
+}
+@media only screen and (max-width: 767px) {
+  .app--banner-info {
+    margin-top: 22px;
+    padding-top: 28px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+.app--mobile {
+  display: none;
+}
+@media only screen and (max-width: 767px) {
+  .app--mobile {
+    display: block;
+    margin-bottom: 24px;
   }
 }
 
@@ -569,10 +599,13 @@ textarea {
   color: #fff;
   margin-bottom: 48px;
   z-index: 2;
+  font-size: 20px;
+  font-weight: 1.5;
 }
 @media only screen and (max-width: 767px) {
   .block__list-item {
     margin-bottom: 26px;
+    font-size: 14px;
   }
 }
 .block__number {
@@ -636,13 +669,6 @@ textarea {
 }
 .send-money__list-item {
   align-items: center;
-  font-size: 20px;
-  font-weight: 1.5;
-}
-@media only screen and (max-width: 767px) {
-  .send-money__list-item {
-    font-size: 14px;
-  }
 }
 .send-money__image {
   width: 540px;
@@ -701,14 +727,17 @@ textarea {
 }
 
 .features {
-  padding-top: 16px;
-  padding-bottom: 24px;
+  padding-top: 84px;
+  padding-bottom: 84px;
+}
+@media only screen and (max-width: 767px) {
+  .features {
+    padding-top: 16px;
+    padding-bottom: 24px;
+  }
 }
 .features__list {
-  padding-left: 48px;
-  padding-top: 80px;
-  padding-right: 46px;
-  padding-bottom: 80px;
+  padding: 80px 46px;
   background: #1a2133;
   border-radius: 16px;
   margin-top: 40px;
@@ -716,10 +745,7 @@ textarea {
 @media only screen and (max-width: 767px) {
   .features__list {
     margin-top: 24px;
-    padding-left: 12px;
-    padding-top: 20px;
-    padding-right: 12px;
-    padding-bottom: 20px;
+    padding: 20px 12px;
     flex-direction: column;
   }
 }
@@ -743,7 +769,7 @@ textarea {
 @media only screen and (max-width: 767px) {
   .features__text {
     margin-top: 0;
-    max-width: 147px;
+    max-width: 184px;
   }
 }
 .features__title {
@@ -782,6 +808,7 @@ textarea {
 @media only screen and (max-width: 767px) {
   .features__image {
     height: 64px;
+    margin-left: 0;
   }
 }
 
@@ -815,12 +842,17 @@ textarea {
   color: #fff;
   font-size: 20px;
   padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  width: 100%;
 }
 .faq__item--button {
   font-weight: 600;
   background-color: transparent;
   border-radius: 12px;
   text-align: left;
+  background-color: #232B3E;
+  cursor: pointer;
 }
 .faq__item--text {
   opacity: 0.6;
@@ -830,13 +862,6 @@ textarea {
     font-size: 14px;
     padding: 12px;
   }
-}
-.faq__button {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  cursor: pointer;
-  background-color: #232B3E;
 }
 .faq__arrow {
   margin-left: auto;
@@ -967,18 +992,14 @@ textarea {
 }
 
 .banner-info {
-  margin-top: 86px;
-  margin-bottom: 86px;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 86px auto;
   background-image: url(../images/desktop/app-info@1x.png);
   background-position: right top;
-  background-size: 1223px 100%;
+  background-size: 1220px 100%;
 }
 @media only screen and (max-width: 767px) {
   .banner-info {
-    margin-top: 16px;
-    margin-bottom: 16px;
+    margin: 16px auto;
     min-height: 562px;
     background-image: url(../images/mobile/app-info@1x.png);
     background-position: center bottom;
@@ -994,58 +1015,41 @@ textarea {
     padding-top: 0;
   }
 }
-.banner-info__app {
-  margin-top: 62px;
-}
-@media only screen and (max-width: 767px) {
-  .banner-info__app {
-    margin-top: 22px;
-    padding-top: 28px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-  }
-}
-.banner-info .app {
-  display: block;
-}
-
-.form-modal {
-  position: fixed;
-  z-index: 15;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-}
 
 .form {
   background-color: #fff;
   border-radius: 9px;
-  padding: 32px 136px;
-}
-.form--result {
-  padding-top: 76px;
-  padding-right: 152px;
-  padding-bottom: 106px;
-  padding-left: 152px;
+  max-width: 704px;
+  width: 100%;
+  position: relative;
 }
 @media only screen and (max-width: 767px) {
   .form {
-    padding: 24px 16px;
+    max-width: 288px;
   }
 }
-.form__question {
-  max-width: 432px;
-  width: 100%;
-}
-.form__question--result {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.form--result {
+  padding-top: 76px;
+  padding-bottom: 106px;
+  padding-left: 152px;
+  padding-right: 152px;
   text-align: center;
+}
+@media only screen and (max-width: 767px) {
+  .form--result {
+    padding-top: 56px;
+    padding-bottom: 54px;
+    padding-left: 46px;
+    padding-right: 46px;
+  }
+}
+.form--question {
+  padding: 32px 136px;
+}
+@media only screen and (max-width: 767px) {
+  .form--question {
+    padding: 24px 16px;
+  }
 }
 .form__title {
   padding-bottom: 14px;
@@ -1078,6 +1082,7 @@ textarea {
   color: rgba(0, 0, 0, 0.8);
   text-align: center;
   max-width: 320px;
+  margin: 0 auto;
 }
 .form__result-text--link {
   color: #4C9EE7;
@@ -1261,4 +1266,7 @@ label.error {
     font-size: 12px;
     margin: 0;
   }
+}
+.footer__wp-logo {
+  display: block;
 }
