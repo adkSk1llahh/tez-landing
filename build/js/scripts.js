@@ -2,7 +2,7 @@ $(".faq__item--button").on("click", function () {
   if ($(this).next().hasClass("active")) {
     $(this).next().removeClass("active");
   } else {
-    $(".faq__text").removeClass("active");
+    $(".faq__item--text").removeClass("active");
     $(this).next().addClass("active");
   }
 });

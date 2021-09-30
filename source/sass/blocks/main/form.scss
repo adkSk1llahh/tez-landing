@@ -1,26 +1,25 @@
 .form {
     background-color: #fff;
-    border-radius: 9px;
+    border-radius: 10px;
     max-width: 704px;
     width: 100%;
     position: relative;
 
     @include respond-to(320) {
         max-width: 288px;
+        border-radius: 5px;
     }
 
     &--result {
         padding-top: 76px;
         padding-bottom: 106px;
-        padding-left: 152px;
-        padding-right: 152px;
+        padding-left: 20px;
+        padding-right: 20px;
         text-align: center;
 
         @include respond-to(320) {
             padding-top: 56px;
             padding-bottom: 54px;
-            padding-left: 46px;
-            padding-right: 46px;
         }
     }
 

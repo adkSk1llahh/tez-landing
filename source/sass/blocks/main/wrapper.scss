@@ -6,15 +6,12 @@
     &__features,
     &__faq,
     &__transfer,
-    &__about {
+    &__about,
+    &__banner-info {
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-  
-    &__footer {
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-    }
-  
-    &__footer {
+    } 
+
+    &__banner-info{
       @include respond-to(320) {
         border: none;
       }

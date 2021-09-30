@@ -61,6 +61,7 @@
   }
 
   &__text{
+    color: #fff;
     @include respond-to(320) {
       font-size: 10px;
     }

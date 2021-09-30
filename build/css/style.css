@@ -130,7 +130,7 @@ textarea {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 2;
   display: none;
   width: 100%;
   height: 100%;
@@ -181,6 +181,7 @@ textarea {
   background-color: #fff;
   margin-left: 0;
   padding: 15px;
+  background-color: transparent;
 }
 @media only screen and (max-width: 767px) {
   .modal__button-close--mobile {
@@ -204,10 +205,11 @@ textarea {
   bottom: 18px;
   border-radius: 50%;
   cursor: pointer;
-  z-index: 10;
+  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #fff;
 }
 
 .menu-mobile {
@@ -218,7 +220,7 @@ textarea {
   position: absolute;
   right: 0;
   top: 0;
-  padding-top: 20px;
+  padding-top: 8px;
   padding-right: 12px;
   padding-bottom: 20px;
   padding-left: 16px;
@@ -239,7 +241,7 @@ textarea {
 .menu-mobile__button {
   position: absolute;
   right: 6px;
-  top: 6px;
+  top: 12px;
   background-color: transparent;
 }
 .menu-mobile__button-image path {
@@ -248,6 +250,9 @@ textarea {
 .menu-mobile__bottom {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   padding-top: 16px;
+}
+.menu-mobile__item {
+  padding: 12px;
 }
 .menu-mobile__text {
   font-size: 12px;
@@ -317,7 +322,7 @@ textarea {
 }
 .language::before {
   position: absolute;
-  top: 15px;
+  top: 14px;
   right: 20px;
   content: "";
   width: 16px;
@@ -329,7 +334,7 @@ textarea {
 }
 @media only screen and (max-width: 767px) {
   .language::before {
-    top: 13px;
+    top: 14px;
     right: 11px;
     width: 14px;
     height: 14px;
@@ -348,30 +353,18 @@ textarea {
   right: 0;
   display: none;
   background-color: #fff;
-  padding-left: 10px;
-  padding-right: 10px;
   border-radius: 8px;
 }
 .language__item {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  padding-left: 32px;
-  padding-right: 32px;
   opacity: 0.4;
 }
 .language__item--active {
   opacity: 1;
 }
 .language__item--top {
-  padding: 14px 16px;
   opacity: 1;
   background: #1a2133;
   border-radius: 8px;
-}
-@media only screen and (max-width: 767px) {
-  .language__item--top {
-    padding: 12px 14px;
-  }
 }
 .language__item--bottom {
   padding: 0;
@@ -379,6 +372,7 @@ textarea {
 }
 .language__item--icon {
   position: relative;
+  display: flex;
 }
 .language__item--icon::before {
   content: "";
@@ -387,7 +381,7 @@ textarea {
   background-size: cover;
   background-repeat: no-repeat;
   position: absolute;
-  left: 2px;
+  left: 10px;
   top: 10px;
 }
 .language__item--kz::before {
@@ -409,14 +403,23 @@ textarea {
   font-size: 16px;
   line-height: 1.25;
   color: #111;
+  display: block;
 }
 .language__item-link--top {
+  padding: 14px 16px;
   color: #fff;
 }
 @media only screen and (max-width: 767px) {
   .language__item-link--top {
     font-size: 14px;
+    padding: 12px 14px;
   }
+}
+.language__item-link--bottom {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 42px;
+  padding-right: 42px;
 }
 .language:hover::before, .language:focus::before {
   transform: rotate(180deg);
@@ -428,14 +431,11 @@ textarea {
 .wrapper {
   border: none;
 }
-.wrapper__send-money, .wrapper__get-money, .wrapper__features, .wrapper__faq, .wrapper__transfer, .wrapper__about {
+.wrapper__send-money, .wrapper__get-money, .wrapper__features, .wrapper__faq, .wrapper__transfer, .wrapper__about, .wrapper__banner-info {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
-.wrapper__footer {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
 @media only screen and (max-width: 767px) {
-  .wrapper__footer {
+  .wrapper__banner-info {
     border: none;
   }
 }
@@ -535,6 +535,9 @@ textarea {
     width: 34px;
     height: 34px;
   }
+}
+.app__text {
+  color: #fff;
 }
 @media only screen and (max-width: 767px) {
   .app__text {
@@ -856,6 +859,10 @@ textarea {
 }
 .faq__item--text {
   opacity: 0.6;
+  display: none;
+}
+.faq__item--text.active {
+  display: block;
 }
 @media only screen and (max-width: 767px) {
   .faq__item {
@@ -865,12 +872,6 @@ textarea {
 }
 .faq__arrow {
   margin-left: auto;
-}
-.faq__text {
-  display: none;
-}
-.faq__text.active {
-  display: block;
 }
 
 .transfer {
@@ -1018,7 +1019,7 @@ textarea {
 
 .form {
   background-color: #fff;
-  border-radius: 9px;
+  border-radius: 10px;
   max-width: 704px;
   width: 100%;
   position: relative;
@@ -1026,21 +1027,20 @@ textarea {
 @media only screen and (max-width: 767px) {
   .form {
     max-width: 288px;
+    border-radius: 5px;
   }
 }
 .form--result {
   padding-top: 76px;
   padding-bottom: 106px;
-  padding-left: 152px;
-  padding-right: 152px;
+  padding-left: 20px;
+  padding-right: 20px;
   text-align: center;
 }
 @media only screen and (max-width: 767px) {
   .form--result {
     padding-top: 56px;
     padding-bottom: 54px;
-    padding-left: 46px;
-    padding-right: 46px;
   }
 }
 .form--question {
