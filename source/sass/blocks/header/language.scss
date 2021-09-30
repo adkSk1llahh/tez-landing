@@ -13,6 +13,7 @@
     position: absolute;
     top: 14px;
     right: 20px;
+    z-index: 1;
 
     content: "";
     width: 16px;
@@ -42,6 +43,7 @@
     position: absolute;
     top: 100%;
     right: 0;
+    transform: translateY(12px);
 
     display: none;
 
@@ -52,6 +54,7 @@
 
   &__item {
     opacity: 0.4;
+    position: relative;
 
     &--active {
       opacity: 1;
@@ -63,15 +66,8 @@
       border-radius: 8px;
     }
 
-    &--bottom{
-      padding: 0;
-      opacity: 1;
-    }
 
-    &--icon {
-      position: relative;
-      display: flex;
-
+    &--kz {
       &::before {
         content: "";
         width: 24px;
@@ -82,29 +78,51 @@
         position: absolute;
         left: 10px;
         top: 10px;
-      }
-    }
-
-    &--kz {
-      &::before {
         background-image: url("../images/icons/kz.svg");
       }
     }
 
     &--ru {
       &::before {
+        content: "";
+        width: 24px;
+        height: 24px;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        position: absolute;
+        left: 10px;
+        top: 10px;
         background-image: url("../images/icons/ru.svg");
       }
     }
 
     &--en {
       &::before {
+        content: "";
+        width: 24px;
+        height: 24px;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        position: absolute;
+        left: 10px;
+        top: 10px;
         background-image: url("../images/icons/en.svg");
       }
     }
 
     &--uz {
       &::before {
+        content: "";
+        width: 24px;
+        height: 24px;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        position: absolute;
+        left: 10px;
+        top: 10px;
         background-image: url("../images/icons/uz.svg");
       }
     }
@@ -122,6 +140,7 @@
     line-height: 1.25;
     color: #111;
     display: block;
+    width: 100%;
 
     &--top {
       padding: 14px 16px;
